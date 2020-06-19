@@ -31,8 +31,6 @@ public class ClientConfiguration {
     @Bean
     public RequestInterceptor requestInterceptor() {
         return requestTemplate -> {
-            requestTemplate.header("user", "ajeje");
-            requestTemplate.header("password", "brazof");
             requestTemplate.header("Accept", ContentType.APPLICATION_JSON.getMimeType());
         };
     }

@@ -18,7 +18,7 @@ public class HelloController {
 
     @GetMapping("/")
     public ResponseEntity<List<Post>> invokeHelloRemote() {
-        List<Post> posts = demoClient.getPosts();
+        List<Post> posts = demoClient.getPosts("ASDF!@#$");
         return new ResponseEntity(posts, HttpStatus.OK);
     }
 }

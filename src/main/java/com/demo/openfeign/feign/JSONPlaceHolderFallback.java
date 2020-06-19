@@ -10,7 +10,7 @@ import java.util.List;
 public class JSONPlaceHolderFallback implements DemoClient {
 
     @Override
-    public List<Post> getPosts() {
+    public List<Post> getPosts(String header) {
         return Collections.emptyList();
     }
 }

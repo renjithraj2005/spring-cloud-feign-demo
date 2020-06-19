@@ -3,6 +3,7 @@ package com.demo.openfeign.feign;
 import com.demo.openfeign.model.Post;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.util.List;
 
@@ -13,5 +14,5 @@ import java.util.List;
 public interface DemoClient {
 
     @GetMapping("/posts")
-    List<Post> getPosts();
+    List<Post> getPosts(@RequestHeader(value = "Authorization", required = true) String authorizationHeader);
 }
