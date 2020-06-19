@@ -21,6 +21,7 @@ public class ClientConfiguration {
 
     @Bean
     public ErrorDecoder errorDecoder() {
+        //Can use our own if required -> new CustomErrorDecoder()
         return new ErrorDecoder.Default();
     }
 
