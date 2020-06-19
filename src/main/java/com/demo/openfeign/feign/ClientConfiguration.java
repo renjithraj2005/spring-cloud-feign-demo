@@ -12,6 +12,7 @@ import org.apache.http.entity.ContentType;
 @Configuration
 public class ClientConfiguration {
 
+    //Documentation https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
 
     @Bean
     public Logger.Level feignLoggerLevel() {
