@@ -1,5 +1,6 @@
 package com.demo.openfeign.feign;
 
+import com.demo.openfeign.exception.CustomErrorDecoder;
 import feign.Logger;
 import feign.RequestInterceptor;
 import feign.codec.ErrorDecoder;
@@ -22,7 +23,8 @@ public class ClientConfiguration {
     @Bean
     public ErrorDecoder errorDecoder() {
         //Can use our own if required -> new CustomErrorDecoder()
-        return new ErrorDecoder.Default();
+        return new CustomErrorDecoder();
+        //return new ErrorDecoder.Default();
     }
 
     @Bean
