@@ -28,7 +28,7 @@ public class ClientException extends Exception {
 
     @Override
     public String toString() {
-        return "BadRequestException: "+getMessage();
+        return "ClientException: "+getMessage();
     }
 
 }
