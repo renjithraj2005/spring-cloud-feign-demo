@@ -9,6 +9,12 @@ public class CustomErrorDecoder implements ErrorDecoder {
     @Override
     public Exception decode(String methodKey, Response response) {
 
+        if (response.status() >= 300 && response.status() <=399) {
+            return new Response3xxException(
+                    response.status(),
+                    response.reason()
+            );
+        }
         if (response.status() >= 400 && response.status() <= 499) {
             return new ClientException(
                     response.status(),
